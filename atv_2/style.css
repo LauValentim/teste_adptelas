@@ -1,3 +1,4 @@
+*
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -13,6 +14,9 @@ header {
     background-color: #6a1eac;
     color: white;
     padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header nav {
@@ -35,33 +39,10 @@ main {
 .intro, .about {
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     padding: 20px;
     border-radius: 30px;
     margin-bottom: 20px;
-}
-
-.intro p {
-    margin-right: 200px;
-    margin-left: 100px;
-   color: #4A007D;
-}
-
-.intro h1 {
-    margin-right: 200px;
-    margin-left: 100px;
-    color: #4A007D;
-    text-align:justify;
- }
-
-.about p {
-    margin-left: 200px;
-    margin-right: 100px;
-}
-
-.about h2 {
-    margin-left: 200px;
-    margin-right: 100px;
 }
 
 .intro .text-content, .about .text-content {
@@ -106,4 +87,76 @@ footer {
     color: #4A007D;
     text-align: center;
     padding: 10px 0;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    .intro, .about {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .intro .text-content, .about .text-content {
+        padding: 10px;
+    }
+
+    .intro .image-content, .about .image-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 20px;
+    }
+
+    .intro, .about {
+        padding: 10px;
+    }
+
+    .intro .text-content, .about .text-content {
+        padding: 10px;
+    }
+
+    .intro .image-content, .about .image-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 460px) {
+    body, .container, header, main, .intro, .about, footer {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .intro, .about {
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    .intro .text-content, .about .text-content, .intro .image-content, .about .image-content {
+        padding: 0;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro, .about {
+        flex-direction: column;
+    }
 }
