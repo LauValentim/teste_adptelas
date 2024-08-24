@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="favoriteMovie.css" />    
+    <title>Meu Cinema</title>
+  </head>
+  <body>
+    <header>
+      <h1>Meu Filme Favorito</h1>
+      <ul>
+        <li>
+          <a href="./index.html" class="link-pagina">Página Principal</a>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <div class="div-informacoes">
+        <h2 id="nome">Kuroneko</h2>
+        <div>
+          <h2>Descrição</h2>
+          <p id="descricao">
+            Durante a Guerra Civil, uma mulher e sua filha são estupradas e assassinadas por dois soldados samurais. Eles rapidamente saem do local do crime, decididos a voltar ali no dia seguinte para se livrar dos corpos. Quando retornam, os dois descobrem que as mulheres se tornaram espíritos que buscam vingança.
+          </p>
+        </div>
+      </div>
+      <div class="div-personagens">
+        <h2>Personagens</h2>
+        <div class="cards">
+          <div>
+            <h2 id="personagem-dois">Mother</h2>
+            <img src="./image/mae.jpg" alt="personagem um" id="imagem-p1"/>
+          </div>
+          <div>
+            <h2 id="personagem-um">Daughter</h2>
+            <img src="./image/filha.jpg" alt="personagem dois" id="imagem-p2" />
+          </div>
+        </div>
+      </div>
+      <button id="abrir-modal">Editar Filme</button>
+    </main>
+    <div class="escondida div-modal" id="modal">
+      <div>
+        <h2>Adicionar Filme</h2>
+        <form action="" id="novo-filme">
+          <label for="novo-nome">Nome</label>
+          <input type="text" placeholder="Nome do filme" id="novo-nome" />
+          <label for="nova-data">Data</label>
+          <input type="date" placeholder="Data de lançamento" id="nova-data" />
+          <label for="nova-descricao">Descrição</label>
+          <input
+            type="text"
+            placeholder="Descrição do filme"
+            id="nova-descricao"
+          />
+
+          <label for="nome-p1">Nome do Personagem 1</label>
+          <input type="text" placeholder="Nome do Personagem um" id="novo-p1" />
+          <label for="novo-p1">Imagem do Personagem 1</label>
+          <input
+            type="file"
+            placeholder="Imagem do personagem um"
+            class="input-arquivo"
+            id="nova-imagem-p1"
+            value=""
+          />
+
+          <label for="nome-p2">Nome do Personagem 2</label>
+          <input
+            type="text"
+            placeholder="Nome do Personagem dois"
+            id="novo-p2"
+          />
+          <label for="imagem-p2">Imagem do Personagem 2</label>
+          <input
+            type="file"
+            placeholder="Imagem do personagem dois"
+            class="input-arquivo"
+            id="nova-imagem-p2"
+            value=""
+          />
+
+          <button id="salvar">Salvar</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <p>
+        Desenvolvido com <i class="bi bi-suit-heart-fill"></i> por
+        <b>Lau Valentim</b>
+      </p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
